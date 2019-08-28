@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row" style="padding:20px">
+    <div class="col-sm-4 poster" *ngFor="let serie of series" [routerLink]="['/detailserie', serie.id]">
+      <img src="https://image.tmdb.org/t/p/w500{{serie.poster_path}}" class="img-fluid">
+      <div class="middle">
+        <h3>{{serie.original_name}}</h3>
+        <h5>{{serie.vote_average}}/10</h5>
+      </div>
+    </div>
+  </div>
+</div>

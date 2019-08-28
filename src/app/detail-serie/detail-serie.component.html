@@ -1,0 +1,12 @@
+<div class="container">
+        <div class="row" style="margin-top:20px;">
+          <div class="col-sm-6">
+            <img src="https://image.tmdb.org/t/p/w500{{serie.poster_path}}" class="img-fluid detail">
+          </div>
+          <div class="col-sm-6 my-auto">
+              <h1>{{serie.name}}</h1>
+              <span class="badge badge-genre" *ngFor="let genre of serie.genres">{{genre.name}}</span>
+              <p style="margin-top:20px;">{{serie.overview}}</p>
+          </div>
+        </div>
+      </div>

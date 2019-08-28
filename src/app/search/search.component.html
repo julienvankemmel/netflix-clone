@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" style="padding:20px">
+    <div class="col-sm-4 poster" *ngFor="let result of results" [ngClass]="{'hide': result.poster_path == null}">
+      <img src="https://image.tmdb.org/t/p/w500{{result.poster_path}}" class="img-fluid">
+      <div class="middle">
+        <h3 >{{result.name || result.title }}</h3>
+        <h5>{{result.vote_average}}/10</h5>
+        <button class="btn btn-primary" *ngIf="result.media_type == 'movie'" [routerLink]="['/detailfilm', result.id]">En Savoir plus</button>
+        <button class="btn btn-primary" *ngIf="result.media_type == 'tv'" [routerLink]="['/detailserie', result.id]">En Savoir plus</button>
+      </div>
+    </div>
+  </div>
+</div>
